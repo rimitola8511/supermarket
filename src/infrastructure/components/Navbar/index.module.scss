@@ -1,0 +1,15 @@
+.nav {
+  background-color: #fff;
+  min-height: 60px;
+  padding: 5px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

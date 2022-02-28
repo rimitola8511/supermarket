@@ -1,0 +1,47 @@
+@import '../../../assets/styles/variables';
+
+.card {
+  background: $mainWhite;
+  margin-bottom: 2rem;
+  box-shadow: $lightShadow;
+  transition: $mainTransition;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: $mainBorderRadius;
+
+  &:hover {
+    box-shadow: $darkShadow;
+  }
+
+  .card__img {
+    width: 50%;
+    margin: 0 auto;
+    img {
+      height: 15rem;
+      object-fit: cover;
+    }
+  }
+  .card__footer {
+    padding: 1.5rem;
+    background-color: $offWhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    h4,
+    button {
+      margin-bottom: 0, 3rem;
+      text-align: center;
+    }
+
+    h3,
+    h4 {
+      color: $primaryDark;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}

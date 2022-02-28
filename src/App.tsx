@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ProductList } from './infrastructure/components/productlist';
+import Container from './infrastructure/components/Container';
+import Navbar from './infrastructure/components/Navbar';
+import { useGlobalContext } from './infrastructure/context';
+import { Product } from './domain/models/Product';
+import { useState, useEffect } from 'react';
+import { productService } from './domain/services/Product.service';
 
 function App() {
+  const { qty, total } = useGlobalContext();
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    productService.getProducts().then(setProducts);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar navCartData={{ qty, total }} />
+      <Container>
+        <ProductList products={products} />
+      </Container>
+    </>
   );
 }
 

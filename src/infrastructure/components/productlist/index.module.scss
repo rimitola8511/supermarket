@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables';
+
+.product__container {
+  width: $smallWidth;
+  margin: 0 auto;
+  max-width: $fullWidth;
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin-top: 30px;
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, minmax(250.8px, 1fr));
+  }
+}
