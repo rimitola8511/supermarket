@@ -14,6 +14,8 @@ Una vez clonado, abrir el directorio raiz y ejecutar `cd supermarket` para entra
 
 ### Pre-requisitos 📋
 
+Nota: `Para efectos de la práctica se eliminó del .gitignore la linea que no permitía subir al repo el archivo .env, de tal manera que al clonar el poryecto esté ya se descargue con el mismo`
+
 ```
 Crear un archivo .env y definir la variable REACT_APP_API_URL = https://run.mocky.io/v3
 ```

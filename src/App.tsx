@@ -5,6 +5,7 @@ import { useGlobalContext } from './infrastructure/context';
 import { Product } from './domain/models/Product';
 import { useState, useEffect } from 'react';
 import { productService } from './domain/services/Product.service';
+import Head from './infrastructure/components/Head';
 
 function App() {
   const { qty, total } = useGlobalContext();
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Head name="Merqueo" />
       <Navbar navCartData={{ qty, total }} />
       <Container>
         <ProductList products={products} />
