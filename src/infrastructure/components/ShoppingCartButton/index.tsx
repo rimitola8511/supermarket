@@ -7,11 +7,11 @@ type shoppingCartButtonProps = {
   decrease: () => void;
 };
 
-export const ShoppingCartButton = ({
+function ShoppingCartButton({
   product,
   increase,
   decrease,
-}: shoppingCartButtonProps) => {
+}: shoppingCartButtonProps) {
   const disabledPlus = product.qty > product.stock;
   const disabledMinus = product.qty === 0;
   return (
@@ -25,4 +25,6 @@ export const ShoppingCartButton = ({
       </button>
     </div>
   );
-};
+}
+
+export default ShoppingCartButton;

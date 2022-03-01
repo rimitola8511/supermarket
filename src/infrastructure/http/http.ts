@@ -1,18 +1,10 @@
-import axios from 'axios';
-
-const headers = {
-  'Content-Type': 'application/json',
-};
-
-const instance = axios.create({
-  baseURL: 'https://run.mocky.io/v3/729fdd53-f365-49b4-bd55-f7e10bcc9a4b',
-  headers,
-});
+import { instance } from '../plugins/axios';
 
 const get = async <T>() => {
   const {
     data: { data },
   } = await instance({
+    url: '/729fdd53-f365-49b4-bd55-f7e10bcc9a4b',
     method: 'GET',
   });
   return data as T;

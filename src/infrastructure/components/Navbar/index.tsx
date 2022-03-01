@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Container from '../Container';
 import Logo from '../Logo';
 import CartInfo from '../CartInfo';
@@ -26,10 +25,3 @@ function Navbar({ navCartData }: NavbarProps) {
 }
 
 export default Navbar;
-
-Navbar.propTypes = {
-  navCarData: PropTypes.shape({
-    qty: PropTypes.number.isRequired,
-    total: PropTypes.number.isRequired,
-  }),
-};

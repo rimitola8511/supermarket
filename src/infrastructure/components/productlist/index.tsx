@@ -6,7 +6,7 @@ type ProductListProps = {
   products: Product[];
 };
 
-export const ProductList = ({ products }: ProductListProps) => {
+function ProductList({ products }: ProductListProps) {
   return (
     <main className={styles.product__container}>
       {products.map((product) => (
@@ -14,4 +14,6 @@ export const ProductList = ({ products }: ProductListProps) => {
       ))}
     </main>
   );
-};
+}
+
+export default ProductList;

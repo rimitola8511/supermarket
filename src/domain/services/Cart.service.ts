@@ -1,4 +1,4 @@
-import * as uuid from 'uuid';
+import { generateUid } from '../../infrastructure/plugins/uid';
 import { Product } from '../models/Product';
 import { Cart } from '../models/Cart';
 
@@ -6,10 +6,9 @@ const hasProduct = (cart: Cart, product: Product) =>
   cart.items.find((item) => item.id === product.id);
 
 const createCart = (product: Product): Cart => {
-  console.log('create');
   const total = product.price;
   return {
-    id: uuid.v4(),
+    id: generateUid(),
     items: [{ ...product, qty: 1 }],
     total,
   };
@@ -68,8 +67,6 @@ const addProductToCart = (product: Product, cart: Cart): Cart => {
       ? increseItemInCart(cart, product)
       : increaseCart(cart, product)
     : createCart(product);
-
-  //return cart ? increaseCart(cart, product) : createCart(product);
 };
 
 export const cartService = {

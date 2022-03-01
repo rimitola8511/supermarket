@@ -4,7 +4,6 @@ import reducer from '../../domain/reducer';
 import { Cart } from '../../domain/models/Cart';
 
 export interface AppContextInterface {
-  loading: boolean;
   cart: Cart;
   qty: number;
   total: number;
@@ -15,7 +14,6 @@ type AppProviderProps = {
 };
 
 const initialState: AppContextInterface = {
-  loading: false,
   cart: { id: '1', items: [], total: 0 },
   qty: 0,
   total: 0,

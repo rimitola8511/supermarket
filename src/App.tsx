@@ -1,4 +1,4 @@
-import { ProductList } from './infrastructure/components/productlist';
+import ProductList from './infrastructure/components/productlist';
 import Container from './infrastructure/components/Container';
 import Navbar from './infrastructure/components/Navbar';
 import { useGlobalContext } from './infrastructure/context';

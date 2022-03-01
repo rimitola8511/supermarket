@@ -1,5 +1,4 @@
 import styles from './index.module.scss';
-import PropTypes from 'prop-types';
 import cart from '../../../assets/images/cart.png';
 import { formatCurrency } from '../../../domain/utils';
 
@@ -23,8 +22,3 @@ function CartInfo({ cart_qty, cart_amount }: CartInfoProps) {
 }
 
 export default CartInfo;
-
-CartInfo.propTypes = {
-  cart_qty: PropTypes.number.isRequired,
-  cart_amount: PropTypes.number.isRequired,
-};

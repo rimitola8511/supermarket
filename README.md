@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Prueba práctica frontend developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+\_Este es un desafio de frontend enviado por Merqueo, hecho con Reactjs
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+\_Primero clonarlo con:
 
-### `npm start`
+```
+git clone https://github.com/rimitola8511/supermarket
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Una vez clonado, abrir el directorio raiz y ejecutar `cd supermarket` para entrar al directorio del proyecto.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Pre-requisitos 📋
 
-### `npm test`
+```
+Crear un archivo .env y definir la variable REACT_APP_API_URL = https://run.mocky.io/v3
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Instalación 🔧
 
-### `npm run build`
+Nota: `La versión de nodejs utilizada es v14.18.2`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+\_Para iniciar el proyecto localmente se debe seguir los siguientes pasos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Y luego_
 
-### `npm run eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Ejecutando las pruebas ⚙️
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+\_Para ejecutar las pruebas unitarias se debe ejecutar en la terminal `npm run test`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Las instrucciones mencionadas anteriormente te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Despliegue 📦
 
-## Learn More
+\_La versión final de la aplicación se encuentra publicada en Netlify en la siguiente URL:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+https://laughing-jepsen-b60f96.netlify.app
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ¿Qué tecnología se utilizaron? 🧱
+
+Se utilizó HTML, CSS y Javascript esté último se combinó con la libreria Reactjs y typescript, ademas de sass, axios y react-testing-library con jest para los test.
+
+## ¿Qué interesante tiene el código?
+
+Se intentó seguir las mejores practicas aplicando arquitectura hexagonal con Reactjs y Typescript, la cual nos permite ordenar nuestro código y hacer que las distintas partes de la aplicación se comuniquen entre sí, también nos ayuda a mantener unos atributos de calidad como la escalabilidad, desacoplamiento y mantenibilidad; se intento modularizar y reutilizar todo lo más posible. La idea es tener un código prolijo pero eficiente fácilmente escalable, se realizaron test unitarios de los componentes visuales, se utilizó una instacia de axios para definir una URL base y así realizar las peticiones a la API de forma optima, se añadireron types como validación de props, se creó un contexto para mantener un estado global de lo necesario junto con el hook useReducer para manejo de estados complejos.
+
+Se prestó atención a la accesibilidad del sitio y al diseño en general respetando el diseño provisto, el cual se optó por desarrollarlo con HTML y CSS sin la necesidad de un framework css, sin descuidar la adaptabilidad a las diferentes pantallas.
+
+---
+
+⌨️ con ❤️ por [Ricardo Imitola](https://github.com/rimitola8511) 😊

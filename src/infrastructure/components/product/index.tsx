@@ -3,14 +3,14 @@ import { Product } from '../../../domain/models/Product';
 import { useGlobalContext } from '../../context';
 import { formatCurrency } from '../../../domain/utils';
 import styles from './index.module.scss';
-import { ShoppingCartButton } from '../ShoppingCartButton';
+import ShoppingCartButton from '../ShoppingCartButton';
 import { productService } from '../../../domain/services/Product.service';
 
 type ProductProps = {
   product: Product;
 };
 
-const Item = ({ product }: ProductProps) => {
+function Item({ product }: ProductProps) {
   const [showShoppingButtons, setShowShoppingButtons] = useState(false);
   const [prod, setProd] = useState<Product>(product);
   const { increase, decrease } = useGlobalContext();
@@ -54,6 +54,6 @@ const Item = ({ product }: ProductProps) => {
       </div>
     </article>
   );
-};
+}
 
 export default Item;
