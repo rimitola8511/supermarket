@@ -60,6 +60,10 @@ Se intentó seguir las mejores practicas aplicando arquitectura hexagonal con Re
 
 Se prestó atención a la accesibilidad del sitio y al diseño en general respetando el diseño provisto, el cual se optó por desarrollarlo con HTML y CSS sin la necesidad de un framework css, sin descuidar la adaptabilidad a las diferentes pantallas.
 
+A la pregunta si se puede implementar el patron Backend for frontend, la respuesta es sí, de hecho nos ayudaría minimizando o definiendo de antemano los datos recibidos por el frontend desde la API a solo los que necesita realmente cada componente, en el caso del esta prueba en particular no se implementó de manera práctica, pero a nivel de frontend con la arquitectura empleada se definió un DTO que nos ayuda a determinar los datos que realmente necesita el proyecto para funcionar, evitando manipular un objeto complejo.
+
+Nota: `En el desarrollo se optó por manetener el estado del carrito de compras en memoria, pero con la solución presentanda se puede escalar facilmente a una solución más orientada a la vida real, como por ejemplo manejarlo en el localStorage o en el indexdb`
+
 ---
 
 ⌨️ con ❤️ por [Ricardo Imitola](https://github.com/rimitola8511) 😊
